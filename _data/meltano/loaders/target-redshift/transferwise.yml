@@ -37,7 +37,7 @@ settings:
   value: false
 - description: S3 Access Key Id. Used for S3 and Redshift copy operations. If not
     provided, `AWS_ACCESS_KEY_ID` environment variable will be used.
-  kind: password
+  sensitive: true
   label: AWS S3 Access Key ID
   name: aws_access_key_id
   sensitive: true
@@ -52,13 +52,13 @@ settings:
   name: aws_redshift_copy_role_arn
 - description: S3 Secret Access Key. Used for S3 and Redshift copy operations. If
     not provided, `AWS_SECRET_ACCESS_KEY` environment variable will be used.
-  kind: password
+  sensitive: true
   label: AWS S3 Secret Access Key
   name: aws_secret_access_key
   sensitive: true
 - description: S3 AWS STS token for temporary credentials. If not provided, `AWS_SESSION_TOKEN`
     environment variable will be used.
-  kind: password
+  sensitive: true
   label: AWS S3 Session Token
   name: aws_session_token
   sensitive: true
@@ -153,7 +153,7 @@ settings:
   name: parallelism
   value: 0
 - description: Redshift password
-  kind: password
+  sensitive: true
   label: Password
   name: password
   sensitive: true
